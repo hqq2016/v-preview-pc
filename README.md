@@ -5,11 +5,11 @@ PC图片预览插件
 
 全局引用
 ```html
-<link href="node_modules/v-preview-pc/dist/index.css" rel="stylesheet">
-<script src="node_modules/v-preview-pc/dist/index.js"></script>
+<link href="https://hqq2016.github.io/v-preview-pc/dist/index.css" rel="stylesheet">
+<script src="https://hqq2016.github.io/v-preview-pc/dist/index.js"></script>
 //引入vue后
 <script>
-  // 自动注入，挂载到Vue.prototype.$vPreview，使用this.$vPreview.show()调用
+  // 如果Vue挂载到全局了，会自动注入，挂载到Vue.prototype.$vPreview，使用this.$vPreview.show()调用，否则，自行调用
 	//Vue.use(vPreview.default)
 </script>
 ```
@@ -46,7 +46,7 @@ export default {
   methods: {
     showPreview() {
       this.$vPreview.show(this.imgList, {
-        currentIndex: 0, //默认显示索引值
+        currentIndex: 0, //默认显示索引值，默认0
         initW: 800 //默认显示宽度，默认值800
       })
     }
